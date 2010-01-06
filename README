@@ -3,7 +3,7 @@ form elements to browsers that don't natively support.
 
 Usage:
 $(document).ready(function() {
-	$.placeholders.shim();
+	$.placeholder.shim();
 }
 
 
