@@ -2,8 +2,10 @@ This plugin adds support for the placeholder attribute in html5
 form elements to browsers that don't natively support.
 
 Usage:
+$(document).ready(function() {
+	$.placeholders.shim();
+}
 
-$.shimPlaceholders();
 
 HTML5 placeholder Example:
 
