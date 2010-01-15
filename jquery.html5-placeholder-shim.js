@@ -39,6 +39,7 @@
 						whiteSpace:'nowrap',
 						textAlign: 'left',
 						color: config.color, 
+						cursor: 'text',
 						fontSize: parseInt($(this).height() * .85)
 					})
 					.css(calcPositionCss(this))
