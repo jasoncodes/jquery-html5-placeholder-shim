@@ -18,6 +18,14 @@
 
 	$.extend($.fn,{
 		_placeholder_shim: function(config) {
+			function calcPositionCss(target)
+			{
+				return {
+					top: $(target).offset().top + ($(target).outerHeight() - $(target).height()) /2 + $(target).height()*.07,
+					left: $(target).offset().left + config.lr_padding,
+					width: $(target).width() - config.lr_padding
+				};
+			}
 			return this.each(function() {
 				if( $(this).data('placeholder') )
 					return true;
@@ -31,11 +39,9 @@
 						whiteSpace:'nowrap',
 						textAlign: 'left',
 						color: config.color, 
-						fontSize: parseInt($(this).height() * .85),
-						top: $(this).offset().top + ($(this).outerHeight() - $(this).height()) /2 + $(this).height()*.07,
-						left: $(this).offset().left + config.lr_padding,
-						width: $(this).width() - config.lr_padding  
+						fontSize: parseInt($(this).height() * .85)
 					})
+					.css(calcPositionCss(this))
 					.data('target',$(this))
 					.click(function(){
 						$(this).data('target').focus()
