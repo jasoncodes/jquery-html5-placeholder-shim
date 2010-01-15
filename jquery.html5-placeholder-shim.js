@@ -54,6 +54,11 @@
 					}).blur(function() {
 						ol[$(this).val().length ? 'hide' : 'show']();
 					}).triggerHandler('blur');
+				$(window)
+					.resize(function() {
+						var $target = ol.data('target')
+						ol.css(calcPositionCss($target))
+					});
 			});
 		} 
 	});
