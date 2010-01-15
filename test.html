@@ -18,7 +18,7 @@ body {
 	background-color:#fff;
 	border:3px solid #999;
 	text-align:left;
-	width:900px;
+	width:90%;
 }
 #wrap input {
 	width:300px;
@@ -40,7 +40,7 @@ display:block;
 float:left;
 width:140px;
 }
-#wrap > div {
+#cont > div {
 	padding:10px 0;
 }
 </style>
@@ -56,33 +56,35 @@ $(function(){
 	<div id="wrap">
 		
 		<h2>Basic Examples</h2>
-		<div>
-			<label>small</label>
-			<input type="text" placeholder="placeholder" class="small" />
-			<input type="text" placeholder="placeholder" value="value" class="small" />
-		</div>	
-		<div>	
-			<label>medium</label>
-			<input type="text" placeholder="placeholder" class="medium" />
-			<input type="text" placeholder="placeholder" value="value" class="medium" />
-		</div>
-		<div>	
-			<label>large</label>
-			<input type="text" placeholder="placeholder" class="large" />
-			<input type="text" placeholder="placeholder" value="value" class="large" />
-		</div>
-		<div>	
-			<label>XL</label>
-			<input type="text" placeholder="placeholder" class="xl" />
-			<input type="text" placeholder="placeholder" value="value" class="xl" />
-		</div>
-		<div>	
-			<label>too long</label>
-			<input type="text" placeholder="too much text shouldn't overflow... too much text shouldn't overflow... too much text shouldn't overflow" class="" />
-			<input type="text" placeholder="too much text shouldn't overflow... too much text shouldn't overflow... too much text shouldn't overflow" value="value" class="" />
+		<a href="#" onclick="$('#cont').toggle()">hide form</a>
+		<div id="cont">
+			<div>
+				<label>small</label>
+				<input type="text" placeholder="placeholder" class="small" />
+				<input type="text" placeholder="placeholder" value="value" class="small" />
+			</div>	
+			<div>	
+				<label>medium</label>
+				<input type="text" placeholder="placeholder" class="medium" />
+				<input type="text" placeholder="placeholder" value="value" class="medium" />
+			</div>
+			<div>	
+				<label>large</label>
+				<input type="text" placeholder="placeholder" class="large" />
+				<input type="text" placeholder="placeholder" value="value" class="large" />
+			</div>
+			<div>	
+				<label>XL</label>
+				<input type="text" placeholder="placeholder" class="xl" />
+				<input type="text" placeholder="placeholder" value="value" class="xl" />
+			</div>
+			<div>	
+				<label>too long</label>
+				<input type="text" placeholder="too much text shouldn't overflow... too much text shouldn't overflow... too much text shouldn't overflow" class="" />
+				<input type="text" placeholder="too much text shouldn't overflow... too much text shouldn't overflow... too much text shouldn't overflow" value="value" class="" />
 			
+			</div>
 		</div>
-		
 		
 	
 	</div>
