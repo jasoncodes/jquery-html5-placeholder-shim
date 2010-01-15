@@ -20,9 +20,12 @@
 		_placeholder_shim: function(config) {
 			function calcPositionCss(target)
 			{
+				var op = $(target).offsetParent().offset();
+				var ot = $(target).offset();
+				//console.log(op,ot);
 				return {
-					top: $(target).offset().top + ($(target).outerHeight() - $(target).height()) /2 + $(target).height()*.07,
-					left: $(target).offset().left + config.lr_padding,
+					top: ot.top - op.top + ($(target).outerHeight() - $(target).height()) /2 + $(target).height()*.07,
+					left: ot.left - op.left + config.lr_padding,
 					width: $(target).width() - config.lr_padding
 				};
 			}
@@ -35,6 +38,8 @@
 					.addClass(config.cls)
 					.css({ 
 						position:'absolute', 
+						display: 'inline',
+						float:'none',
 						overflow:'hidden', 
 						whiteSpace:'nowrap',
 						textAlign: 'left',
@@ -47,7 +52,7 @@
 					.click(function(){
 						$(this).data('target').focus()
 					})
-					.appendTo('body')
+					.insertAfter(this);
 				$(this)
 					.data('placeholder',ol)
 					.focus(function(){
