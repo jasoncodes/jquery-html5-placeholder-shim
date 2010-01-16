@@ -51,11 +51,12 @@
 						fontSize: parseInt($(this).height() * .85)
 					})
 					.css(calcPositionCss(this))
+					.attr('for', this.id)
 					.data('target',$(this))
 					.click(function(){
 						$(this).data('target').focus()
 					})
-					.insertAfter(this);
+					.insertBefore(this);
 				$(this)
 					.data('placeholder',ol)
 					.focus(function(){
