@@ -30,8 +30,11 @@
 				};
 			}
 			return this.each(function() {
-				if( $(this).data('placeholder') )
+				if( $(this).data('placeholder') ) {
+					var $ol = $(this).data('placeholder');
+					$ol.css(calcPositionCss($(this)));
 					return true;
+				}
 				
 				var ol = $('<label />')
 					.text($(this).attr('placeholder'))
