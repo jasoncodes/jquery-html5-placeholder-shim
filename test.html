@@ -66,13 +66,14 @@ $(function(){
 		
 		<h2>Basic Examples</h2>
 		<a href="#" onclick="$('#cont').toggle();return false;">hide form</a>
+		<a href="#" onclick="$('#medium').toggle();$.placeholder.shim();return false;">hide medium row</a>
 		<div id="cont" >
 			<div>
 				<label>small</label>
 				<input type="text" placeholder="placeholder" class="small" />
 				<input type="text" placeholder="placeholder" value="value" class="small" />
 			</div>	
-			<div>	
+			<div id="medium">
 				<label>medium</label>
 				<input type="text" placeholder="placeholder" class="medium" />
 				<input type="text" placeholder="placeholder" value="value" class="medium" />
